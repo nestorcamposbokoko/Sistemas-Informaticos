@@ -11,6 +11,9 @@ else if [ $valor1 -lt $valor2 ]; then
                 echo "El número $valor2 es menor que $valor1"
 fi
 
+
+
+
 EJERCICIO 4
 
 read -p "Introduce un número mayor que 0: " num
@@ -30,6 +33,9 @@ fi
 for i in `seq 0 $num`; do
         echo "El valor es $i"
 done
+
+
+
 
 EJERCICIO 3
 
@@ -57,4 +63,5 @@ else if [ $notanum -ge 7 ] && [ $notanum -lt 9 ]; then
 else if [ $notanum -ge 9 ] && [ $notanum -le 10 ]; then
         echo "Sobresaliente"
 fi
+
 
