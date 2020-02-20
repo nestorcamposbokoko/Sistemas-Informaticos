@@ -1,3 +1,5 @@
+EJERCICIO 1
+
 read -p "Introduce valor 1: " valor1
 read -p "Introduce valor 2: " valor2
 
@@ -8,3 +10,23 @@ else if [ $valor1 -lt $valor2 ]; then
         else
                 echo "El número $valor2 es menor que $valor1"
 fi
+
+EJERCICIO 4
+
+read -p "Introduce un número mayor que 0: " num
+
+while [ $num -lt 0 ];
+do
+        read -p "Introduce un número mayor que 0: " num
+done
+
+if [ $num -gt 0 ]; then
+        echo "El valor es correcto"
+else
+        echo "El valor NO es correcto"
+
+fi
+
+for i in `seq 0 $num`; do
+        echo "El valor es $i"
+done
