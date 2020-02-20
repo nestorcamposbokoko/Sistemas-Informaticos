@@ -30,3 +30,31 @@ fi
 for i in `seq 0 $num`; do
         echo "El valor es $i"
 done
+
+EJERCICIO 3
+
+read -p "Introduce una nota numérica: " notanum
+
+while [ $notanum -lt 0 ];
+do
+        read -p "La nota ha de ser un número positivo: " notanum
+done
+
+if [ $notanum -gt 0 ]; then
+        echo "El valor es correcto"
+else
+        echo "El valor NO es correcto. La nota no puede ser negativa."
+fi
+
+if [ $notanum -ge 0 ] && [ $notanum -lt 5 ]; then
+        echo "Insuficiente"
+else if [ $notanum -ge 5 ] && [ $notanum -lt 6 ]; then
+        echo "Suficiente"
+else if [ $notanum -ge 6 ] && [ $notanum -lt 7 ]; then
+        echo "Bien"
+else if [ $notanum -ge 7 ] && [ $notanum -lt 9 ]; then
+        echo "Notable"
+else if [ $notanum -ge 9 ] && [ $notanum -le 10 ]; then
+        echo "Sobresaliente"
+fi
+
