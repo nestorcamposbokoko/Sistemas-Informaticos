@@ -65,3 +65,19 @@ else if [ $notanum -ge 9 ] && [ $notanum -le 10 ]; then
 fi
 
 
+
+
+EJERCICIO 7 (inacabat)
+
+read -p "Introduce un dia numérico del mes: " dianum
+
+while [ $dianum -lt 1 -a $dianum -gt 30 ];
+do
+        read -p "El número del día no está dentro del rango: " dianum
+done
+
+if [ $dianum -lt 1 -a $dianum -gt 30 ]; then
+        echo "El valor es correcto"
+else
+        echo "El valor NO es correcto. El número del día NO está dentro del rango."
+fi
