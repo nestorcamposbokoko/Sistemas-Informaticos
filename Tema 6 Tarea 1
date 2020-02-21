@@ -1,5 +1,6 @@
+-----------------------------
 EJERCICIO 1 (per a arreglar)
-
+-----------------------------
 read -p "Introduce valor 1: " valor1
 read -p "Introduce valor 2: " valor2
 
@@ -13,9 +14,9 @@ fi
 
 
 
-
+-----------------------------
 EJERCICIO 4
-
+-----------------------------
 read -p "Introduce un número mayor que 0: " num
 
 while [ $num -lt 0 ];
@@ -36,9 +37,9 @@ done
 
 
 
-
+-----------------------------
 EJERCICIO 3 (per a arreglar)
-
+-----------------------------
 read -p "Introduce una nota numérica: " notanum
 
 while [ $notanum -lt 0 ];
@@ -46,29 +47,29 @@ do
         read -p "La nota ha de ser un número positivo: " notanum
 done
 
-if [ $notanum -gt 0 ]; then
+if [ $notanum -ge 0 ]; then
         echo "El valor es correcto"
 else
         echo "El valor NO es correcto. La nota no puede ser negativa."
 fi
 
-if [ $notanum -ge 0 ] && [ $notanum -lt 5 ]; then
+if [ $notanum -ge 0 -a $notanum -lt 5 ]; then
         echo "Insuficiente"
-else if [ $notanum -ge 5 ] && [ $notanum -lt 6 ]; then
+else if [ $notanum -ge 5 -a $notanum -lt 6 ]; then
         echo "Suficiente"
-else if [ $notanum -ge 6 ] && [ $notanum -lt 7 ]; then
+else if [ $notanum -ge 6 -a $notanum -lt 7 ]; then
         echo "Bien"
-else if [ $notanum -ge 7 ] && [ $notanum -lt 9 ]; then
+else if [ $notanum -ge 7 -a $notanum -lt 9 ]; then
         echo "Notable"
-else if [ $notanum -ge 9 ] && [ $notanum -le 10 ]; then
+else if [ $notanum -ge 9 -a $notanum -le 10 ]; then
         echo "Sobresaliente"
 fi
 
 
 
-
+-----------------------------
 EJERCICIO 7 (inacabat)
-
+-----------------------------
 read -p "Introduce un dia numérico del mes: " dianum
 
 while [ $dianum -lt 1 -a $dianum -gt 30 ];
@@ -84,8 +85,9 @@ fi
 
 
 
-
+-----------------------------
 EJERCICIO 2 (per a arreglar)
+-----------------------------
 read -p "Introduce un número para saber si es PAR o IMPAR: " num
 
 while [ $num -lt 1 ];
