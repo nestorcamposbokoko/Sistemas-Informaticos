@@ -1,15 +1,19 @@
 -----------------------------
-EJERCICIO 1 (per a arreglar)
+EJERCICIO 1
 -----------------------------
 read -p "Introduce valor 1: " valor1
 read -p "Introduce valor 2: " valor2
 
 if [ $valor1 -gt $valor2 ]; then
         echo "El número $valor1 es mayor que $valor2"
-else if [ $valor1 -lt $valor2 ]; then
+else
         echo "El número $valor2 es mayor que $valor1"
-        else
-                echo "El número $valor2 es menor que $valor1"
+fi
+
+if [ $valor1 -eq $valor2 ]; then
+   echo "Los números $valor1 y $valor2 son iguales"
+else
+   echo "Los números $valor1 y $valor2 NO son iguales"
 fi
 
 
@@ -106,4 +110,38 @@ if [ $resto -eq 0 ]; then
         echo "El número $num es PAR"
 else
         echo "El número $num es IMPAR"
+fi
+
+
+-----------------------------
+EJERCICIO 5
+-----------------------------
+read -p "Introduce un numero: " num
+while [ $num -ne 0 ]; do
+     $suma + = $num
+read -p "Introduce otro numero: " num
+ if [ $num -eq 0 ]; then
+   echo "La suma de todos los numeros es $suma"
+   break
+fi  
+done
+echo "fin"
+
+
+
+-----------------------------
+EJERCICIO 6
+-----------------------------
+read -p "¿Cuantos litros de agua necesitas? " litro
+if [ $litro -gt 0 ] && [ $litro -le 50 ]; then
+  litro=$(echo "scale=0; $litro * 2.5" | bc)
+  echo "$litro€"
+elif [ $litro -gt 50 ] && [ $litro -le 200 ]; then
+  litro=$(echo "scale=0; $litro * 0.20" | bc)
+  echo "$litro€"
+elif [ $litro -gt 200 ]; then
+  litro=$(echo "scale=2; $litro * 0.10" | bc)
+  echo "$litro€"
+else
+  echo "El numero introducido es menor o igual a cero"
 fi
