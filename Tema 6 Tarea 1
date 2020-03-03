@@ -32,11 +32,10 @@ if [ $num -gt 0 ]; then
         echo "El valor es correcto"
 else
         echo "El valor NO es correcto"
-
 fi
 
 for i in `seq 0 $num`; do
-        echo "El valor es $i"
+        echo "$i"
 done
 
 
@@ -46,7 +45,7 @@ EJERCICIO 3 (per a arreglar)
 -----------------------------
 read -p "Introduce una nota numérica: " notanum
 
-while [ $notanum -lt 0 ];
+while [ $notanum -le 0 ] || [ $notanum gt 10 ];
 do
         read -p "La nota ha de ser un número positivo: " notanum
 done
@@ -76,7 +75,7 @@ EJERCICIO 7 (inacabat)
 -----------------------------
 read -p "Introduce un dia numérico del mes: " dianum
 
-while [ $dianum -lt 1 -a $dianum -gt 30 ];
+while [ $dianum -lt 1 ] || [ $dianum -gt 30 ];
 do
         read -p "El número del día no está dentro del rango: " dianum
 done
